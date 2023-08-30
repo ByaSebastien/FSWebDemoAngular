@@ -14,5 +14,5 @@
  -->
 <p>Exercice + ou -</p>
 <h1>{{myNumber}}</h1>
-<input type="button" value="-" (click)="withdrawOne()" [disabled]="myNumber <= 0">
-<input type="button" value="+" (click)="addOne()" [disabled]="myNumber >= 10">
+<button (click)="withdrawOne()" [disabled]="myNumber <= 0"> - </button>
+<button (click)="addOne()" [disabled]="myNumber >= 10"> + </button>
