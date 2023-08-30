@@ -1,15 +1,30 @@
-<p>demo1 works!</p>
-<!--
-  ctrl + k + c => mise en commentaire
-
-  afficher une valeur numérique
-
-  créer 2 bouton :
-      1 bouton + (incrémenté la valeur affichée)
-      1 bouton - (décrementé)
-
-  Bonus :
-    Trouver une manière de désactiver le bouton - si la valeur passe sous 0
-    Trouver une manière de désactiver le bouton + si la valeur passe au dessus de 10
-    La solution se trouve entre les slide 31 et 38
- -->
+<h2>Les bindings</h2>
+<div class="chapter">
+    <h3>Property Binding</h3>
+    <div>
+        <h4>One way Binding</h4>
+        <p>Bonjour et bienvenue {{prenom}}</p>
+    </div>
+    <div>
+        <h4>Two way Binding</h4>
+        <input type="text" [(ngModel)]="prenom2">
+        <p>Ah enchantée {{prenom2}}</p>
+    </div>
+</div>
+<div class="chapter">
+    <h3>Event Binding</h3>
+    <p>Aujourd'hui nous sommes {{jour}}</p>
+    <button (click)="changerJour('lundi')">Lundi</button>
+    <button (click)="changerJour('mardi')">Mardi</button>
+    <button (click)="changerJour('mercredi')">Mercredi</button>
+    <button (click)="changerJour('jeudi')">Jeudi</button>
+    <button (click)="changerJour('vendredi')">Vendredi</button>
+    <button (click)="changerJour('samedi')">Samedi</button>
+    <button (click)="changerJour('dimanche')">Dimanche</button>
+</div>
+<div class="chapter">
+    <h3>Attribute Binding</h3>
+    <div [id]="id">Ma Super Div</div>
+    <button [disabled]="!isActive">Click Me</button>
+    <button (click)="toggleActive()">Activer/Desactiver</button>
+</div>
